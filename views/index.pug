@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1 My Form
+    form(action="/results" method="post")
+      label(for="description") Description:
+      br
+      textarea(id = "description" name= "description" cols=40 rows=5)
+      br
+      label(for="firstName") First:
+      input(type="text" name="firstName" id="firstName")
+      br
+      label(for="type") Type
+        select(name="type" id="type")
+          option(value = "Bronze") Bronze
+          option(value = "Standard") Standard
+          option(value = "Premium") Premium
+        br
+        label(for="dateOfBirth") DOB
+        input(type="date" name="dateOfBirth" id="dateOfBirth")
+        br
+        input(type="radio" name="Yes" id="Yes" value="Yes")
+        label(for="Yes") Yes
+
+        input(type="radio" name="No" id="No" value="No")
+        label(for="No") No
+        br
+        button(type="submit") Submit
